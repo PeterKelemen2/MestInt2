@@ -1,5 +1,6 @@
 from collections import deque
 
+from cups import Cup3
 from hanoi import Hanoi
 import problem
 from node import Node
@@ -58,11 +59,14 @@ def breadth_first_tree_search(problem):
 
 def main():
     h = Hanoi(3)
-    print(h.size, h.initial, h.goal)
-
+    print(f"Hanoi: {h.size}, {h.initial}, {h.goal}")
     breadth_first_tree_search(h).solution()
-
     depth_first_graph_search(h).solution()
+
+    c = Cup3((5, 0, 0), [(4, 1, 0), (4, 0, 1)])
+    print(f"Hanoi: {c.initial}, {c.goal}")
+    breadth_first_tree_search(c).solution()
+    depth_first_graph_search(c).solution()
 
 
 if __name__ == "__main__":
