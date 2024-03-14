@@ -1,3 +1,8 @@
+from collections import deque
+
+from node import Node
+
+
 class Problem:
     def __init__(self, initial, goal=None):
         self.initial = initial
@@ -24,3 +29,5 @@ class Problem:
 
     def value(self, state):
         raise NotImplementedError
+
+
